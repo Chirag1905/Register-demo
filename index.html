@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Website with CRUD</title>
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="image">
+      <div class="header-text">
+        <h1 class="header-title">Sample Website</h1>
+        <p class="header-p">A Webpage Created by Saloni Vaghela</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#" id="home-link">Home</a>
+      <a href="#" id="about-link">About</a>
+      <a href="#" id="contact-link">Contact</a>
+      <a href="#" id="crud-link">CRUD</a>
+    </nav>
+  </header>
+  <div class="container">
+    <div id="home">
+      <h1>Welcome to the Sample Website</h1>
+      <p>Click on the links above to navigate.</p>
+    </div>
+    <div id="about">
+      <div class="about-section">
+        <div class="about-section1">
+
+          <h2>To-Do: Add One Image for Each Person</h2>
+          <form id="image-form">
+            <input type="text" id="person-name" placeholder="Enter person's name" required>
+            <input type="file" id="image-upload" accept="image/*" required>
+            <button type="submit">Upload Image</button>
+          </form>
+
+          <!-- Table to show uploaded images with Edit and Update buttons -->
+          <table id="image-table" border="1" style="margin-top: 20px; width: 100%;">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="image-table-body">
+              <!-- Dynamic table rows for each person will be added here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact">
+      <h1>Contact Us</h1>
+      <p>This is the Contact page. Add your contact details here.</p>
+    </div>
+    <div id="crud">
+      <h1>User Management (CRUD)</h1>
+      <form id="user-form">
+        <input type="text" id="user-name" placeholder="Enter user name" required>
+        <button type="submit">Add User</button>
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="user-list">
+          <!-- Dynamic user rows will be added here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
